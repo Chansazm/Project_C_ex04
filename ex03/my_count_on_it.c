@@ -2,16 +2,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef struct s_string_array {
+#ifndef STRUCT_STRING_ARRAY
+#define STRUCT_STRING_ARRAY
+typedef struct s_string_array
+{
     int size;
-    char **array;
+    char** array;
 } string_array;
+#endif
 
-typedef struct s_integer_array {
+#ifndef STRUCT_INTEGER_ARRAY
+#define STRUCT_INTEGER_ARRAY
+typedef struct s_integer_array
+{
     int size;
-    int *array;
+    int* array;
 } integer_array;
-
+#endif
 
 integer_array *my_count_on_it(string_array* param_1) {
     integer_array *pointer;
